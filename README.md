@@ -1,75 +1,30 @@
-# Stock Market Analysis Project
+# Russell 1000 Risk–Return Analysis
 
-## Overview
-This project analyzes the risk-return relationships in the Russell 1000 stocks, focusing on predictability patterns in returns, volatility, and various risk metrics. The analysis spans from 1962 through 2024, using daily stock returns and Fama-French factors.
+Long-horizon analysis of Russell 1000 stocks (1962–2024) with Fama–French factors — risk metrics, predictability, and visualization.
 
-## Project Goals
-1. Demonstrate advanced data manipulation and visualization techniques in financial analysis
-2. Explore and understand the risk-return tradeoff using multiple risk measures
+## Goals
 
-## Data Sources
-- Russell 1000 stock returns (`returns.csv`)
-  - Daily returns from 1962 through 2024
-  - Sourced from Yahoo Finance
-- Fama-French factors (`ff.csv`)
-  - Daily factor returns from 1962 through 2024
-  - Includes market risk premium and risk-free rate
+1. Practice advanced financial data wrangling and plotting
+2. Study risk–return tradeoffs with multiple risk measures
+3. Relate equity returns to Fama–French factor series
 
-## Dependencies
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- yfinance
-- pandas_datareader
-- requests_cache
+## Data
 
-## Analysis Components
+- Daily Russell 1000 returns (`returns.csv`) — Yahoo Finance
+- Daily Fama–French factors (`ff.csv`) — market premium + risk-free rate
 
-### Single Stock Analysis
-- Return predictability analysis
-- Sharpe ratio persistence
-- Beta stability analysis
-- Relationships between:
-  - Volatility and future returns
-  - Beta and future returns
+## Stack
 
-### Portfolio Analysis I
-- Analysis of 100 random portfolios
-- Each portfolio contains 50 equally-weighted stocks
-- Daily rebalancing
-- Examines:
-  - Volatility as a predictor of future returns
-  - Beta as a predictor of future returns
-- Comparison between single stock and portfolio behaviors
+Python · Jupyter · pandas · NumPy · matplotlib
 
-### Portfolio Analysis II
-- Monthly volatility-based portfolio formation
-- Five portfolios based on previous month's volatility
-- Equal weighting with monthly rebalancing
-- Minimum 15 daily returns per stock-month
-- Analysis of:
-  - Return patterns across volatility quintiles
-  - Risk-adjusted performance metrics
-  - Sharpe ratios across portfolios
+## Run
 
-## Key Functions
-- `mean()`: Calculates annualized mean returns
-- `std()`: Calculates annualized standard deviation
-- `sharpe()`: Computes Sharpe ratio using risk-free rate
-- `beta()`: Calculates CAPM beta
-- `stats_all_ann()`: Generates comprehensive annual statistics
-- `scatter()`: Creates regression plots with confidence intervals
-- `stats_corr()`: Computes correlations with outlier analysis
+```bash
+git clone https://github.com/Ojchavan/Russel1000.git
+cd Russel1000
+jupyter notebook
+```
 
-## Visualization Features
-- Scatter plots with regression lines
-- Comparative analysis plots
-- Portfolio performance visualizations
-- Multi-panel comparisons of different metrics
+## License
 
-## Usage Notes
-- Stock data requires complete returns for analysis periods
-- Portfolio analysis uses random sampling for diversification
-- Volatility-based portfolios are formed using lagged measures
-- All returns and risk metrics are annualized for comparison
+MIT © Omkar Chavan
